@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113315813-1"></script>
+    <script src="https://davidlyons.dev/sketches/ga.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Welcome to Berlin</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background: #000;
+      }
+      #claw {
+        margin-top: 0;
+        width: 500px;
+        height: 500px;
+      }
+      #claw .st0 {
+        stroke-width: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="claw"></div>
+
+    <script src="//cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+    <script>
+      new Vivus('claw', { file: 'assets/claw.svg', duration: 300, delay: 150 }, function () {});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "berlin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "berlin-sketch.js",
+  "scripts": {
+    "dev": "canvas-sketch berlin-sketch.js --open --output=./tmp",
+    "stream": "canvas-sketch berlin-sketch.js --open --output=./exports --stream",
+    "build": "canvas-sketch berlin-sketch.js --name index --build --inline --no-compress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas-sketch": "^0.7.3",
+    "three": "^0.119.1"
+  }
+}

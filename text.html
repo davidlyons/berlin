@@ -38,5 +38,19 @@
         animation__2="property: position; to: 0 1.25 -5; dur: 2000; easing: easeOutCubic; loop: false;"
       ></a-gltf-model>
     </a-scene>
+
+    <h1>Welcome to Berlin</h1>
+    <div id="location">Secret Location</div>
+    <div id="date">August 22nd</div>
+    <div id="time">Doors Open 18:00</div>
+    <div id="feat">Feat DJ Clawz</div>
+    <div id="squiggle">≈</div>
+
+    <div id="claw"></div>
+
+    <script src="//cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+    <script>
+      new Vivus('claw', { file: 'assets/claw.svg', duration: 150, delay: 100 }, function () {});
+    </script>
   </body>
 </html>
