@@ -8,6 +8,7 @@ require('three/examples/js/loaders/GLTFLoader');
 const canvasSketch = require('canvas-sketch');
 
 const settings = {
+  name: 'headphones',
   animate: true,
   context: 'webgl',
   attributes: { antialias: true },
@@ -24,7 +25,7 @@ const sketch = ({ context }) => {
   const mono = true;
 
   const clearColor = mono ? '#000' : '#3f2936';
-  renderer.setClearColor(clearColor, 1);
+  renderer.setClearColor(clearColor, 0);
 
   const camera = new THREE.PerspectiveCamera(50, 1, 0.01, 100);
   camera.position.set(0, 0, 5);
@@ -35,12 +36,16 @@ const sketch = ({ context }) => {
   const scene = new THREE.Scene();
 
   // Lights
-  const aLight = new THREE.AmbientLight(mono ? 0x000000 : 0x3f2936, 0.8);
+  const aLight = new THREE.AmbientLight(mono ? 0x0d0d0d : 0x3f2936, 0.8);
   scene.add(aLight);
 
   const keyLight = new THREE.DirectionalLight(mono ? 0xffffff : 0xff0059, mono ? 0.3 : 0.9);
-  keyLight.position.set(-1, 1.5, 0.8).multiplyScalar(2);
+  keyLight.position.set(-1, 1.4, 0.2).multiplyScalar(2);
   scene.add(keyLight);
+
+  const keyLight2 = new THREE.DirectionalLight(mono ? 0xffffff : 0xff0059, mono ? 0.07 : 0.3);
+  keyLight2.position.set(-1, 0.3, 0.8).multiplyScalar(2);
+  scene.add(keyLight2);
 
   const fillLight = new THREE.DirectionalLight(mono ? 0xffffff : 0xff3892, mono ? 0.2 : 0.6);
   fillLight.position.set(1, 0.5, 0).multiplyScalar(2);
@@ -52,8 +57,13 @@ const sketch = ({ context }) => {
 
   // var keyLightHelper = new THREE.DirectionalLightHelper(keyLight, 1);
   // scene.add(keyLightHelper);
+
+  // var keyLightHelper2 = new THREE.DirectionalLightHelper(keyLight2, 1);
+  // scene.add(keyLightHelper2);
+
   // var fillLightHelper = new THREE.DirectionalLightHelper(fillLight, 1);
   // scene.add(fillLightHelper);
+
   // var backLightHelper = new THREE.DirectionalLightHelper(backLight, 1);
   // scene.add(backLightHelper);
 
